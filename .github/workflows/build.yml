@@ -24,4 +24,4 @@ jobs:
           git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9 -b android10-release --depth=1
           cd $expwd
       - name: "Build Kernel Image"
-        run: bash build_kernel.sh
+        run: sudo bash build_kernel.sh
