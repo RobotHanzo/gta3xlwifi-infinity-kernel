@@ -17,5 +17,8 @@ jobs:
       - name: "Install Required APT Packages"
         run: |
           sudo apt-get update && sudo apt-get install zip unzip lzip lzop zlib1g-dev xzdec xz-utils pixz p7zip-full p7zip-rar zstd libzstd-dev lib32z1-dev build-essential gcc gcc-multilib g++ g++-multilib clang llvm lld cmake automake autoconf ncurses-bin libncurses5-dev lib32ncurses5-dev bc libreadline-gplv2-dev libsdl1.2-dev libtinfo5 file gawk xterm screen rename tree schedtool software-properties-common dos2unix jq flex bison gperf exfat-utils exfat-fuse libb2-dev pngcrush imagemagick optipng advancecomp
+      - name: "Get aarch64-linux-android-4.9"
+        run: |
+          git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9 -b android10-release --depth=1 ../aarch64-linux-android-4.9
       - name: "Build Kernel Image"
         run: bash build_kernel.sh
