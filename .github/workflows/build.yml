@@ -4,6 +4,8 @@ on:
       - master
     tags:
       - "**"
+  workflow_dispatch:
+
 name: "Automatic Build System"
 jobs:
   build:
